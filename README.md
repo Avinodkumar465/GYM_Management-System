@@ -2,7 +2,7 @@ package com.tap.oops;
 
 import java.util.*;
 
-//---- Abstract Class ----
+
 abstract class Person {
  protected String name;
  protected int age;
@@ -17,7 +17,7 @@ abstract class Person {
  public abstract void displayInfo();
 }
 
-//---- Member Class ----
+
 class Member extends Person {
  private String membershipType;
  private int duration;
@@ -55,7 +55,7 @@ class Member extends Person {
  }
 }
 
-//---- Trainer Class ----
+
 class Trainer extends Person {
  private String specialization;
  private double salary;
@@ -77,7 +77,7 @@ class Trainer extends Person {
  }
 }
 
-//---- GymPlan Class ----
+
 class GymPlan {
  private String planName;
  private double price;
@@ -96,14 +96,14 @@ class GymPlan {
  }
 }
 
-//---- Gym Management System ----
+
 class GymManagementSystem {
  private List<Member> members = new ArrayList<>();
  private List<Trainer> trainers = new ArrayList<>();
 
  public void addMember(Member m) {
      members.add(m);
-     System.out.println("✅ Member added successfully!");
+     System.out.println("Member added successfully!");
  }
 
  public void viewMembers() {
@@ -121,11 +121,11 @@ class GymManagementSystem {
      for (Member m : members) {
          if (m.name.equalsIgnoreCase(name)) {
              m.setMembershipType(newType);
-             System.out.println("✅ Membership updated for " + name);
+             System.out.println(" Membership updated for " + name);
              return;
          }
      }
-     System.out.println("❌ Member not found!");
+     System.out.println(" Member not found!");
  }
 
  public void removeMember(String name) {
@@ -134,16 +134,16 @@ class GymManagementSystem {
          Member m = itr.next();
          if (m.name.equalsIgnoreCase(name)) {
              itr.remove();
-             System.out.println("✅ Member removed successfully!");
+             System.out.println(" Member removed successfully!");
              return;
          }
      }
-     System.out.println("❌ Member not found!");
+     System.out.println(" Member not found!");
  }
 
  public void addTrainer(Trainer t) {
      trainers.add(t);
-     System.out.println("✅ Trainer added successfully!");
+     System.out.println(" Trainer added successfully!");
  }
 
  public void viewTrainers() {
@@ -158,7 +158,7 @@ class GymManagementSystem {
  }
 }
 
-//---- Main Class ----
+
 public class Main {
  public static void main(String[] args) {
      Scanner sc = new Scanner(System.in);
@@ -232,11 +232,11 @@ public class Main {
              vip.showPlan();
 
          } else if (choice == 8) {
-             System.out.println("👋 Thank you for using Gym Management System!");
+             System.out.println(" Thank you for using Gym Management System!");
              running = false;
 
          } else {
-             System.out.println("❌ Invalid choice! Please try again.");
+             System.out.println(" Invalid choice! Please try again.");
          }
      }
 
